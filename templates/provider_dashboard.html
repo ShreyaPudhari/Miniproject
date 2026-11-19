@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Provider Dashboard</title>
+</head>
+<body>
+
+    <h1>Service Provider Dashboard</h1>
+
+    <h2>Welcome, {{ provider_details[0] }}!</h2>
+
+    <h3>Your Profile Details</h3>
+
+    <p><strong>Name:</strong> {{ provider_details[0] }}</p>
+
+    <p><strong>Mobile:</strong> {{ provider_details[1] }}</p>
+
+    <p><strong>Service Type:</strong> {{ provider_details[2] }}</p>
+
+    <p><strong>Location:</strong> {{ provider_details[3] }}</p>
+
+    <p><strong>Availability:</strong> {{ provider_details[4] }}</p>
+
+    <hr>
+
+    <h3>Manage Your Services</h3>
+
+    <p>View the customer requests assigned to you.</p>
+
+    <a href="/provider_assigned_requests">
+        View Assigned Requests
+    </a>
+
+    <br><br>
+
+    <a href="/service_providers">View Service Providers</a>
+
+    <br><br>
+
+    <a href="/">Back to Home</a>
+
+</body>
+</html>

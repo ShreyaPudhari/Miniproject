@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .customer-header {
+            text-align: center;
+            padding: 35px 15px 20px;
+        }
+
+        .customer-header p {
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        .customer-services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 30px auto;
+        }
+
+        .customer-services .card {
+            width: 300px;
+            max-width: 100%;
+            text-align: center;
+            border-top: 4px solid #1769aa;
+        }
+
+        .customer-services .card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: table;
+            margin: 35px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="customer-header">
+        <h1>Welcome, Customer!</h1>
+        <p>How can we help you today?</p>
+    </div>
+
+    <div class="container">
+
+        <h2 class="section-title">Our Assistance Services</h2>
+
+        <div class="customer-services">
+
+            <div class="card">
+                <h3>Breakdown Assistance</h3>
+                <p>Get roadside support when your vehicle experiences a breakdown.</p>
+                <a href="/breakdown">Request Assistance</a>
+            </div>
+
+            <div class="card">
+                <h3>Fuel Assistance</h3>
+                <p>Request fuel support when your vehicle runs out of fuel.</p>
+                <a href="/fuel">Request Fuel</a>
+            </div>
+
+        </div>
+
+        <a href="/" class="back-link">Back to Home</a>
+
+    </div>
+
+</body>
+</html>

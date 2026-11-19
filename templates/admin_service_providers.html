@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Service Providers</title>
+</head>
+<body>
+
+    <h1>Manage Service Providers</h1>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Service Type</th>
+            <th>Location</th>
+            <th>Availability</th>
+            <th>Update</th>
+        </tr>
+
+        {% for provider in providers %}
+        <tr>
+            <td>{{ provider[0] }}</td>
+            <td>{{ provider[1] }}</td>
+            <td>{{ provider[2] }}</td>
+            <td>{{ provider[3] }}</td>
+            <td>{{ provider[4] }}</td>
+            <td>{{ provider[5] }}</td>
+
+            <td>
+                <form action="/update_provider_availability" method="POST">
+
+                    <input type="hidden"
+                           name="provider_id"
+                           value="{{ provider[0] }}">
+
+                    <select name="availability" required>
+
+                        <option value="Available"
+                            {% if provider[5] == "Available" %}selected{% endif %}>
+                            Available
+                        </option>
+
+                        <option value="Not Available"
+                            {% if provider[5] == "Not Available" %}selected{% endif %}>
+                            Not Available
+                        </option>
+
+                    </select>
+
+                    <button type="submit">Update</button>
+
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/admin_dashboard">Back to Dashboard</a>
+
+</body>
+</html>

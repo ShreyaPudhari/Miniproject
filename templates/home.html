@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Road Breakdown and Fuel Assistance</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f0f6ff;
+            color: #243b53;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #123b70;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+            color: #dceaff;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 55px 15px 30px;
+        }
+
+        .welcome h2 {
+            color: #123b70;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .welcome p {
+            color: #61758b;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1050px;
+            margin: 20px auto 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 22px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(18, 59, 112, 0.10);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 9px 24px rgba(18, 59, 112, 0.15);
+        }
+
+        .card .icon {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            color: #123b70;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #687b90;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .card a {
+            display: inline-block;
+            background: #1769aa;
+            color: white;
+            text-decoration: none;
+            padding: 11px 24px;
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .card a:hover {
+            background: #0e4e85;
+        }
+
+        footer {
+            margin-top: auto;
+            background: #123b70;
+            color: white;
+            text-align: center;
+            padding: 18px 10px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            .welcome h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🚗 On Road Breakdown & Fuel Assistance</h1>
+        <p>Your roadside support, whenever you need it!</p>
+    </header>
+
+    <section class="welcome">
+        <h2>Welcome!</h2>
+        <p>Please select your role to continue.</p>
+    </section>
+
+    <main class="container">
+
+        <div class="card">
+            <div class="icon">🚘</div>
+            <h3>Customer</h3>
+            <p>
+                Need roadside help? Request breakdown
+                assistance or fuel delivery easily.
+            </p>
+            <a href="/customer_home">Continue</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🛠️</div>
+            <h3>Service Provider</h3>
+            <p>
+                Register as a service provider or log in
+                to access your account.
+            </p>
+            <a href="/provider_login">Login / Register</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">👨‍💼</div>
+            <h3>Admin</h3>
+            <p>
+                Manage customer requests and service
+                providers through the admin panel.
+            </p>
+            <a href="/admin">Admin Login</a>
+        </div>
+
+    </main>
+
+    <footer>
+        On Road Breakdown and Fuel Assistance System | MCA Mini Project
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Providers</title>
+</head>
+<body>
+    <h1>Registered Service Providers</h1>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Service Type</th>
+            <th>Location</th>
+            <th>Availability</th>
+        </tr>
+
+        {% for provider in providers %}
+        <tr>
+            <td>{{ provider[0] }}</td>
+            <td>{{ provider[1] }}</td>
+            <td>{{ provider[2] }}</td>
+            <td>{{ provider[3] }}</td>
+            <td>{{ provider[4] }}</td>
+            <td>{{ provider[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

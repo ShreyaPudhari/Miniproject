@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Provider Registration</title>
+</head>
+<body>
+    <h1>Service Provider Registration</h1>
+
+    <form action="/register_provider" method="POST">
+
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+
+        <label>Mobile:</label>
+        <input type="text" name="mobile" required>
+        <br><br>
+
+        <label>Service Type:</label>
+        <select name="service_type" required>
+            <option value="">Select Service</option>
+            <option value="Mechanic">Mechanic</option>
+            <option value="Fuel Delivery">Fuel Delivery</option>
+        </select>
+        <br><br>
+
+        <label>Location:</label>
+        <input type="text" name="location" required>
+        <br><br>
+
+        <label>Availability:</label>
+        <select name="availability" required>
+            <option value="">Select Availability</option>
+            <option value="Available">Available</option>
+            <option value="Not Available">Not Available</option>
+        </select>
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" required minlength="8">
+        <br><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <br>
+    <a href="/provider_login">Back to Login</a>
+</body>
+</html>
